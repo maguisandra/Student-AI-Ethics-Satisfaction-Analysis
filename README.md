@@ -1,2 +1,116 @@
-# Student-AI-Ethics-Satisfaction-Analysis
-A data-driven study of 16,000+ students exploring the paradox between ChatGPT satisfaction and ethical risk awareness. Built with Python &amp; Power BI.
+# Student AI Ethics & Satisfaction Analysis: A Computational Study  
+Data Analysis | Python | Power BI | Behavioral Study  
+
+---
+
+## 🎯 Project Overview  
+
+This project analyzes a global survey on student usage of ChatGPT. The main objective is to understand a behavioral paradox: are the most satisfied users of the tool also those who perceive the least ethical risks associated with its use (cheating, information reliability, privacy concerns)?
+
+The data used in this study were collected between **October 2023 and February 2024**, a period corresponding to the initial large-scale adoption of generative AI in higher education.
+
+## 📊 Data Processing & Cleaning
+
+The analysis is based on a rigorous data preparation process:
+
+- Raw dataset: **23,218 rows and 174 columns**
+- Feature selection: **57 relevant columns retained**
+- Final filtering: only active ChatGPT users were kept  
+→ **16,010 final observations analyzed**
+
+The original dataset was reorganized into thematic dimension tables (**df_socio**, **df_usage**, **df_ethic**, **df_satisfaction**) to improve clarity and facilitate analysis.
+
+Each table captures a specific aspect of the study and is linked through a common key: **Respondent_ID**.
+
+Composite variables (indices) were constructed by averaging multiple related survey items. These indices were designed to measure higher-level constructs such as usage patterns, ethical concerns, regulatory perception, and user satisfaction.
+
+A minimum response threshold of approximately **75%** was applied to ensure the reliability of these indicators. Observations not meeting this threshold were retained with missing values (NaN).
+
+In addition, the original survey variables (Q1 to Q25) were renamed into meaningful and interpretable column names (e.g., Gender, Study_Level), improving readability and usability for both analysis and visualization in BI tools.
+
+The final dataset structure clearly distinguishes between:
+- **Categorical variables (dimensions)**  
+- **Numerical indicators (fact-based measures)**  
+
+This design follows a **dimensional modeling approach**, making the dataset suitable for both statistical analysis and business intelligence applications.
+
+Overall, this structuring process ensures the consistency, reliability, and analytical relevance of the final dataset.
+
+## 🧪 Methodology  
+
+The analysis follows a structured computational pipeline:
+
+- **Data cleaning**: removal of irrelevant values and structuring of the dataset  
+- **Transformation and labeling**: conversion of numerical variables into interpretable categories  
+- **Indicator construction**: creation of mean scores for three main dimensions:
+  - ChatGPT usage patterns  
+  - User satisfaction  
+  - Perceived ethical risks (information reliability, academic integrity, privacy, and social impact)  
+
+These indicators are computed from homogeneous variable groups using a **75% response reliability threshold**.
+
+- **Statistical analysis**: correlation analysis between satisfaction, usage, and risk perception  
+- **Visualization**: development of interactive dashboards using Power BI
+## 📈 Key Findings  
+
+### 🔹 Satisfaction Paradox  
+
+A negative correlation is observed between user satisfaction and perception of immediate risks:
+
+- Information reliability: decreased vigilance  
+- Academic risks (cheating, plagiarism): reduced concern  
+- Privacy concerns: lower levels of attention  
+
+👉 The more satisfied students are, the less they perceive direct risks associated with ChatGPT usage.
+
+---
+
+### 🔹 Important Exception: Social Impact  
+
+Unlike other dimensions, perception of social risks (isolation, societal impact) remains stable, with a correlation close to zero.
+
+👉 This suggests that students remain aware of long-term societal implications of AI, even when they are highly satisfied with its daily use.
+
+---
+
+### 🔹 Consistency of Risk Perception  
+
+All types of risks are strongly correlated with each other, indicating a structured and coherent perception of ethical concerns related to AI.
+
+---
+
+## 🛠️ Tech Stack  
+
+- Python (Pandas, NumPy)  
+- Power BI (Power Query, DAX)  
+- Jupyter Notebook  
+- Excel (data preprocessing)  
+
+---
+
+## 📂 Project Structure  
+
+- data/ : raw dataset + cleaned files  
+- scripts/ : notebooks and Python scripts  
+- docs/ : data dictionary and documentation  
+- outputs/ : Power BI dashboards and visualizations  
+
+---
+
+## 📌 Data Source  
+
+Original dataset: University of Ljubljana  
+DOI: 10.17632/ymg9nsn6kn.2  
+License: CC BY 4.0  
+
+---
+
+⚖️ Project Objective
+
+This project goes beyond statistical analysis. It aims to understand how the use of artificial intelligence tools shapes human perception of risk and ethical behavior in an educational context.
+
+At the end of this analysis, a fundamental question emerges: how reliable are the knowledge outputs generated by AI? Our findings show that higher levels of satisfaction tend to reduce users’ vigilance toward ethical risks. This dynamic becomes particularly concerning, as poorly constructed training data may lead AI systems to propagate inaccurate knowledge to a generation of students who increasingly view them as trusted partners.
+
+In this context, the ethics and quality of data annotation become critical societal issues to prevent the amplification of bias.
+
+Although based on data collected between 2023 and 2024, this study provides a valuable historical benchmark. It captures the state of students’ relationship with digital truth at the moment of AI’s massive adoption and offers a basis for understanding how this relationship may evolve over time.
